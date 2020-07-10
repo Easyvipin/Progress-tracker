@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="title-div">
+      <h1 class="title">PROGRESS TRACKER</h1>
+      <p class="title-para">
+        You can enter your goal into this tracker and it will create a calendar
+        specially for tracking that goal. You can use the colors at the end of
+        the calendar to track your progress by using the color codes: Green=good
+        progress, purple=reasonably good progress and red=not so good progress.
+        When you want to clear out all the calendars and start afresh, scroll
+        down to the bottom of the page and click on the clear button.
+      </p>
+    </div>
+    <div class="container">
+      <form class="goal-form" action="/">
+        <label for="goal">Enter your goal below</label>
+        <div class="label-btn-div">
+          <input class="goal-input" type="text" />
+          <button class="submit-btn" type="submit">Start tracking</button>
+        </div>
+      </form>
+
+      <div class="table-div">
+        <h1 class="month-and-year"></h1>
+        <div class="all-tables-div"></div>
+        <div class="instruc-div">
+          <h1 class="instruc-head">
+            Enter your goal & start progressing !
+          </h1>
+        </div>
+      </div>
+      <button class="clear-btn none-display" type="button">
+        Clear all the goals and accomplishments
+      </button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+
+  <footer>Made by Manaswini</footer>
+</html>

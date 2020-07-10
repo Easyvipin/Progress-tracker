@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,400,500,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+footer {
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+  text-align: center;
+  background-color: #2c333a;
+}
+
+footer {
+  color: #fff;
+  font-weight: 500;
+}
+.title-div {
+  padding-top: 30px;
+}
+
+.title,
+.title-para {
+  color: #fff;
+  font-weight: 400;
+  padding: 10px 30px;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #2c333a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.label-btn-div {
+  display: flex;
+  margin: 20px;
+}
+
+.goal-form {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.goal-form label {
+  color: #fff;
+  font-weight: 400;
+  margin-top: 45px;
+}
+
+.goal-input {
+  border-style: none;
+  padding: 10px;
+}
+
+.goal-input:focus {
+  outline: none;
+}
+
+.submit-btn,
+.clear-btn {
+  background-color: #0d5c5e;
+  font-family: "Raleway", sans-serif;
+  border-style: none;
+  padding: 10px;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+.clear-btn:hover {
+  background-color: #118e91;
+  transform: scale(1.06);
+}
+
+.submit-btn:focus,
+.clear-btn:focus {
+  outline: none;
+}
+
+.month-and-year {
+  color: #fff;
+  font-weight: 200;
+}
+
+.table-div {
+  padding-top: 15px;
+}
+
+.all-tables-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container {
+  margin: 10px;
+}
+
+.goal-para {
+  color: #fff;
+  font-weight: 200;
+  padding: 10px;
+}
+
+th,
+tr,
+td {
+  padding: 9px;
+  color: #fff;
+  background-color: #121417;
+  font-weight: 200;
+}
+
+td:hover {
+  background-color: #000;
+}
+
+.colors-div {
+  display: flex;
+}
+
+.color-box {
+  width: 3rem;
+  height: 3rem;
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+
+.green {
+  background-color: #199c56;
+}
+
+.green:hover {
+  background-color: #157d46;
+}
+
+.purple {
+  background-color: #6e3878;
+}
+
+.purple:hover {
+  background-color: #592d61;
+}
+
+.red {
+  background-color: #872b34;
+}
+
+.red:hover {
+  background-color: #73242b;
+}
+
+.instruc-div {
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instruc-head {
+  color: rgb(255, 255, 255, 0.3);
+  font-weight: 700;
+  padding: 10px;
+}
+
+.none-display {
+  display: none;
+  opacity: 0;
+}
+
+.goal-para {
+  display: inline-block;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
