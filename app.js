@@ -7,6 +7,8 @@ let selectedColor = ""; //This contains the presently selected color by the user
 const instrucHead = document.querySelector(".instruc-head"); //This is the sentence that is visible only when
 //the user first enters the app
 
+const statusBar = document.querySelector(".status");
+
 const clearBtn = document.querySelector(".clear-btn");
 
 if (goals.length !== 0) {
@@ -16,7 +18,7 @@ if (goals.length !== 0) {
 
 //store numbers with specific colors in local storage
 const greenIds = JSON.parse(localStorage.getItem("green")) || [];
-const purpleIds = JSON.parse(localStorage.getItem("purple")) || [];
+const yellowIds = JSON.parse(localStorage.getItem("yellow")) || [];
 const redIds = JSON.parse(localStorage.getItem("red")) || [];
 
 const months = [
@@ -61,8 +63,8 @@ greenIds.forEach((id) => {
   document.getElementById(id).classList.add("green");
 });
 
-purpleIds.forEach((id) => {
-  document.getElementById(id).classList.add("purple");
+yellowIds.forEach((id) => {
+  document.getElementById(id).classList.add("yellow");
 });
 
 redIds.forEach((id) => {
@@ -147,12 +149,13 @@ function createAndShowCalendar(goal) {
 
         cell.addEventListener("click", () => {
           document.getElementById(cell.id).classList.add(selectedColor);
+
           if (selectedColor === "green") {
             greenIds.push(cell.id); //For local storage
             localStorage.setItem("green", JSON.stringify(greenIds));
-          } else if (selectedColor === "purple") {
-            purpleIds.push(cell.id); //For local storage
-            localStorage.setItem("purple", JSON.stringify(purpleIds));
+          } else if (selectedColor === "yellow") {
+            yellowIds.push(cell.id); //For local storage
+            localStorage.setItem("yellow", JSON.stringify(yellowIds));
           } else if (selectedColor === "red") {
             redIds.push(cell.id); //For local storage
             localStorage.setItem("red", JSON.stringify(redIds));
@@ -174,9 +177,9 @@ function createAndShowCalendar(goal) {
   greenBox.setAttribute("class", "color-box green" + " " + goal);
   colorsDiv.appendChild(greenBox);
 
-  let purpleBox = document.createElement("div");
-  purpleBox.setAttribute("class", "color-box purple" + " " + goal);
-  colorsDiv.appendChild(purpleBox);
+  let yellowBox = document.createElement("div");
+  yellowBox.setAttribute("class", "color-box yellow" + " " + goal);
+  colorsDiv.appendChild(yellowBox);
 
   let redBox = document.createElement("div");
   redBox.setAttribute("class", "color-box red" + " " + goal);
@@ -187,23 +190,30 @@ function createAndShowCalendar(goal) {
 
   greenBox.addEventListener("click", () => {
     selectedColor = "green";
+    statusBar.style.backgroundColor = "#205622";
+    statusBar.style.color = "#fff";
   });
 
-  purpleBox.addEventListener("click", () => {
-    selectedColor = "purple";
+  yellowBox.addEventListener("click", () => {
+    selectedColor = "yellow";
+    statusBar.style.backgroundColor = "#dec20a";
+    statusBar.style.color = "#000";
   });
 
   redBox.addEventListener("click", () => {
     selectedColor = "red";
+    statusBar.style.backgroundColor = "#ff072c";
+    statusBar.style.color = "#fff";
   });
 
   clearBtn.addEventListener("click", () => {
     localStorage.removeItem("goals");
     localStorage.removeItem("green");
-    localStorage.removeItem("purple");
+    localStorage.removeItem("yellow");
     localStorage.removeItem("red");
     tableDiv.classList.add("none-display");
     instrucHead.classList.remove("none-display");
     clearBtn.classList.add("none-display");
+    window.location.reload(true);
   });
 } // Here is the end of the createAndShowCalendar function
