@@ -129,10 +129,6 @@ td {
   font-weight: 200;
 }
 
-td:hover {
-  background-color: #000;
-}
-
 .colors-div {
   display: flex;
 }
@@ -142,30 +138,22 @@ td:hover {
   height: 3rem;
   margin: 20px 10px;
   border-radius: 10px;
+  border: 1px solid grey;
 }
 
 .green {
-  background-color: #205622;
-}
-
-.green:hover {
   background-color: #184a1a;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
 }
 
 .yellow {
-  background-color: #dec20a;
-}
-
-.yellow:hover {
   background-color: #a58f03;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
 }
 
 .red {
-  background-color: #ff072c;
-}
-
-.red:hover {
   background-color: #c30421;
+  background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
 }
 
 .instruc-div {
@@ -212,13 +200,13 @@ td:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #757373;
+  background: #f2f2f2;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #545252;
+  background: #ccc8c8;
 }
 
 footer {
@@ -239,4 +227,7 @@ footer {
   font-weight: 700;
   background-color: #454545;
   padding: 2vmin;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }

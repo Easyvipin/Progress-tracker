@@ -190,19 +190,25 @@ function createAndShowCalendar(goal) {
 
   greenBox.addEventListener("click", () => {
     selectedColor = "green";
-    statusBar.style.backgroundColor = "#205622";
+    statusBar.style.backgroundColor = "#184a1a";
+    statusBar.style.backgroundImage =
+      "url('https://www.transparenttextures.com/patterns/3px-tile.png')";
     statusBar.style.color = "#fff";
   });
 
   yellowBox.addEventListener("click", () => {
     selectedColor = "yellow";
-    statusBar.style.backgroundColor = "#dec20a";
+    statusBar.style.backgroundColor = "#a58f03";
+    statusBar.style.backgroundImage =
+      'url("https://www.transparenttextures.com/patterns/black-linen.png")';
     statusBar.style.color = "#000";
   });
 
   redBox.addEventListener("click", () => {
     selectedColor = "red";
-    statusBar.style.backgroundColor = "#ff072c";
+    statusBar.style.backgroundColor = "#c30421";
+    statusBar.style.backgroundImage =
+      'url("https://www.transparenttextures.com/patterns/back-pattern.png")';
     statusBar.style.color = "#fff";
   });
 
